@@ -1,13 +1,14 @@
 const activeAnchor = {
   $header: null,
   $links: null,
+  offset: 0,
   vars: {
     windowHeight: 0,
     headerHeight: 0
   },
   updVars() {
     this.vars.windowHeight = window.innerHeight;
-    this.vars.headerHeight = this.$header ? this.$header.offsetHeight - 90 : 0;
+    this.vars.headerHeight = this.$header ? this.$header.offsetHeight + this.offset : this.offset;
   },
   setActive( el ) {
     if ( !el.classList.contains( 'active' ) ) {
@@ -15,7 +16,8 @@ const activeAnchor = {
       el.classList.add( 'active' );
     }
   },
-  init({headerId = 'js-header', navbarId = 'js-navbar' } = {}) {
+  init({headerId = 'js-header', navbarId = 'js-navbar', offset = 0 } = {}) {
+    this.offset = offset;
     this.$header = document.getElementById( headerId );
     this.$links = Array.prototype.slice.call( document.querySelectorAll( `#${navbarId} a` ) );
     this.updVars();

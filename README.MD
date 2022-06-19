@@ -12,8 +12,9 @@ The package adds `active` class to links while scrolling and creates an offset f
 import activeAnchor from 'active-anchor';
 
 activeAnchor.init({
-  headerId: 'js-header', //if needed an offset for a sticky header
-  navbarId: 'js-navbar'
+  headerId: 'js-header',  // Optional, if need an offset for a sticky header
+  offset: 0,              // Optional, an additional offset size
+  navbarId: 'js-navbar'   // Optional, `js-navbar` is default 
 });
 ```
 ```html
