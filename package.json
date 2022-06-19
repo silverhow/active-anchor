@@ -1,0 +1,21 @@
+{
+  "name": "active-anchor",
+  "version": "1.0.3",
+  "description": "The package adds active class to links while scrolling and creates an offset for a sticky header when scrolling by an anchor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "homepage": "https://github.com/silverhow/active-anchor",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/silverhow/active-anchor.git"
+  },
+  "keywords": [
+    "scroll",
+    "anchor",
+    "active"
+  ],
+  "author": "silverhow",
+  "license": "MIT"
+}
