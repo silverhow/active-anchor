@@ -15,9 +15,9 @@ const activeAnchor = {
       el.classList.add( 'active' );
     }
   },
-  init({headerClass = 'js-header', navbarClass = 'js-active-anchor' } = {}) {
-    this.$header = document.getElementById( headerClass );
-    this.$links = Array.prototype.slice.call( document.querySelectorAll( `.${navbarClass} a` ) );
+  init({headerId = 'js-header', navbarId = 'js-navbar' } = {}) {
+    this.$header = document.getElementById( headerId );
+    this.$links = Array.prototype.slice.call( document.querySelectorAll( `#${navbarId} a` ) );
     this.updVars();
     window.addEventListener( 'resize', event => this.updVars() );
 
